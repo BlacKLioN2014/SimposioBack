@@ -1,0 +1,6 @@
+@SimposioBack_HostAddress = http://localhost:5055
+
+GET {{SimposioBack_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
