@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace SimposioBack.Models
 {
-    public class InvitadoExtra
+    public class InvitadosExtra
     {
         [Key]
         public int Id_Invitado_Extra { get; set; }
@@ -25,7 +25,6 @@ namespace SimposioBack.Models
         [StringLength(50)]
         public string Apellido_Materno { get; set; }
 
-        [Required]
         public string Cliente_Externo { get; set; }
     }
 }

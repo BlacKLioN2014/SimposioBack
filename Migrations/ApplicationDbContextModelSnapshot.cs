@@ -21,6 +21,56 @@ namespace SimposioBack.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("SimposioBack.Models.Cliente", b =>
+                {
+                    b.Property<int>("Id_Cliente")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id_Cliente"));
+
+                    b.Property<string>("Estado")
+                        .IsRequired()
+                        .HasMaxLength(60)
+                        .HasColumnType("nvarchar(60)");
+
+                    b.Property<int>("Id_Evento")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Nombre_Cliente")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Numero_Invitados")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id_Cliente");
+
+                    b.HasIndex("Id_Evento");
+
+                    b.ToTable("Cliente");
+                });
+
+            modelBuilder.Entity("SimposioBack.Models.Evento", b =>
+                {
+                    b.Property<int>("Id_Evento")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id_Evento"));
+
+                    b.Property<bool>("Estatus")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Nombre_Evento")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id_Evento");
+
+                    b.ToTable("Evento");
+                });
+
             modelBuilder.Entity("SimposioBack.Models.Usuario", b =>
                 {
                     b.Property<int>("Id_Usuario")
@@ -46,6 +96,17 @@ namespace SimposioBack.Migrations
                     b.HasKey("Id_Usuario");
 
                     b.ToTable("Usuario");
+                });
+
+            modelBuilder.Entity("SimposioBack.Models.Cliente", b =>
+                {
+                    b.HasOne("SimposioBack.Models.Evento", "Evento")
+                        .WithMany()
+                        .HasForeignKey("Id_Evento")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Evento");
                 });
 #pragma warning restore 612, 618
         }

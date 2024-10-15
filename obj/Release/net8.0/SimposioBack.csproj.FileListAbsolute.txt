@@ -148,3 +148,4 @@ C:\Users\abraham.jimenez\Desktop\Proyectos\SimposioBack\obj\Release\net8.0\refin
 C:\Users\abraham.jimenez\Desktop\Proyectos\SimposioBack\obj\Release\net8.0\SimposioBack.pdb
 C:\Users\abraham.jimenez\Desktop\Proyectos\SimposioBack\obj\Release\net8.0\SimposioBack.genruntimeconfig.cache
 C:\Users\abraham.jimenez\Desktop\Proyectos\SimposioBack\obj\Release\net8.0\ref\SimposioBack.dll
+C:\Users\abraham.jimenez\Desktop\Proyectos\SimposioBack\obj\Release\net8.0\SimposioBack.sourcelink.json

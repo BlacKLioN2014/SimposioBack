@@ -7,16 +7,24 @@
       "RelativeMoniker": "D:0:0:{75CACDDC-94CB-400F-98B6-120BE9940638}|SimposioBack.csproj|solutionrelative:controllers\\simposiocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{75CACDDC-94CB-400F-98B6-120BE9940638}|SimposioBack.csproj|c:\\users\\abraham.jimenez\\desktop\\proyectos\\simposioback\\repository\\usuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{75CACDDC-94CB-400F-98B6-120BE9940638}|SimposioBack.csproj|solutionrelative:repository\\usuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{75CACDDC-94CB-400F-98B6-120BE9940638}|SimposioBack.csproj|c:\\users\\abraham.jimenez\\desktop\\proyectos\\simposioback\\repository\\invitadosextrarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{75CACDDC-94CB-400F-98B6-120BE9940638}|SimposioBack.csproj|solutionrelative:repository\\invitadosextrarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{75CACDDC-94CB-400F-98B6-120BE9940638}|SimposioBack.csproj|c:\\users\\abraham.jimenez\\desktop\\proyectos\\simposioback\\repository\\irepository\\iusuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{75CACDDC-94CB-400F-98B6-120BE9940638}|SimposioBack.csproj|solutionrelative:repository\\irepository\\iusuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{75CACDDC-94CB-400F-98B6-120BE9940638}|SimposioBack.csproj|c:\\users\\abraham.jimenez\\desktop\\proyectos\\simposioback\\repository\\irepository\\iinvitadosextrarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{75CACDDC-94CB-400F-98B6-120BE9940638}|SimposioBack.csproj|solutionrelative:repository\\irepository\\iinvitadosextrarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{75CACDDC-94CB-400F-98B6-120BE9940638}|SimposioBack.csproj|c:\\users\\abraham.jimenez\\desktop\\proyectos\\simposioback\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{75CACDDC-94CB-400F-98B6-120BE9940638}|SimposioBack.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{75CACDDC-94CB-400F-98B6-120BE9940638}|SimposioBack.csproj|c:\\users\\abraham.jimenez\\desktop\\proyectos\\simposioback\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{75CACDDC-94CB-400F-98B6-120BE9940638}|SimposioBack.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{75CACDDC-94CB-400F-98B6-120BE9940638}|SimposioBack.csproj|c:\\users\\abraham.jimenez\\desktop\\proyectos\\simposioback\\data\\methods.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{75CACDDC-94CB-400F-98B6-120BE9940638}|SimposioBack.csproj|solutionrelative:data\\methods.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,41 +42,67 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\abraham.jimenez\\Desktop\\Proyectos\\SimposioBack\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\abraham.jimenez\\Desktop\\Proyectos\\SimposioBack\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAADgAAAAAAAAAAAAAAEQAAAADAAAA",
+              "ViewState": "AQIAACcAAAAAAAAAAAAAAEkAAAA2AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-11T22:44:02.448Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IUsuarioRepository.cs",
-              "DocumentMoniker": "C:\\Users\\abraham.jimenez\\Desktop\\Proyectos\\SimposioBack\\Repository\\IRepository\\IUsuarioRepository.cs",
-              "RelativeDocumentMoniker": "Repository\\IRepository\\IUsuarioRepository.cs",
-              "ToolTip": "C:\\Users\\abraham.jimenez\\Desktop\\Proyectos\\SimposioBack\\Repository\\IRepository\\IUsuarioRepository.cs",
-              "RelativeToolTip": "Repository\\IRepository\\IUsuarioRepository.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABAAAAAkAAAA",
+              "DocumentIndex": 3,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\abraham.jimenez\\Desktop\\Proyectos\\SimposioBack\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\abraham.jimenez\\Desktop\\Proyectos\\SimposioBack\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Data\\ApplicationDbContext.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABMAAAA0AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-14T18:41:13.622Z",
+              "WhenOpened": "2024-10-14T21:33:17.856Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IInvitadosExtraRepository.cs",
+              "DocumentMoniker": "C:\\Users\\abraham.jimenez\\Desktop\\Proyectos\\SimposioBack\\Repository\\IRepository\\IInvitadosExtraRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\IRepository\\IInvitadosExtraRepository.cs",
+              "ToolTip": "C:\\Users\\abraham.jimenez\\Desktop\\Proyectos\\SimposioBack\\Repository\\IRepository\\IInvitadosExtraRepository.cs",
+              "RelativeToolTip": "Repository\\IRepository\\IInvitadosExtraRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-15T20:52:25.712Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "UsuarioRepository.cs",
-              "DocumentMoniker": "C:\\Users\\abraham.jimenez\\Desktop\\Proyectos\\SimposioBack\\Repository\\UsuarioRepository.cs",
-              "RelativeDocumentMoniker": "Repository\\UsuarioRepository.cs",
-              "ToolTip": "C:\\Users\\abraham.jimenez\\Desktop\\Proyectos\\SimposioBack\\Repository\\UsuarioRepository.cs",
-              "RelativeToolTip": "Repository\\UsuarioRepository.cs",
-              "ViewState": "AQIAAEUAAAAAAAAAAAAAwFgAAAAIAAAA",
+              "Title": "InvitadosExtraRepository.cs",
+              "DocumentMoniker": "C:\\Users\\abraham.jimenez\\Desktop\\Proyectos\\SimposioBack\\Repository\\InvitadosExtraRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\InvitadosExtraRepository.cs",
+              "ToolTip": "C:\\Users\\abraham.jimenez\\Desktop\\Proyectos\\SimposioBack\\Repository\\InvitadosExtraRepository.cs",
+              "RelativeToolTip": "Repository\\InvitadosExtraRepository.cs",
+              "ViewState": "AQIAACgAAAAAAAAAAAArwDUAAAA8AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-11T21:44:26.277Z",
+              "WhenOpened": "2024-10-15T20:52:51.951Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Methods.cs",
+              "DocumentMoniker": "C:\\Users\\abraham.jimenez\\Desktop\\Proyectos\\SimposioBack\\Data\\Methods.cs",
+              "RelativeDocumentMoniker": "Data\\Methods.cs",
+              "ToolTip": "C:\\Users\\abraham.jimenez\\Desktop\\Proyectos\\SimposioBack\\Data\\Methods.cs",
+              "RelativeToolTip": "Data\\Methods.cs",
+              "ViewState": "AQIAALAAAAAAAAAAAADgv8MAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-15T16:36:38.318Z",
               "EditorCaption": ""
             },
             {
@@ -79,7 +113,7 @@
               "RelativeDocumentMoniker": "Controllers\\SimposioController.cs",
               "ToolTip": "C:\\Users\\abraham.jimenez\\Desktop\\Proyectos\\SimposioBack\\Controllers\\SimposioController.cs",
               "RelativeToolTip": "Controllers\\SimposioController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAGwAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-11T22:31:32.243Z",
               "EditorCaption": ""

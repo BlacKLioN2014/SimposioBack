@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SimposioBack.Models
 {
-    public class Invitado
+    public class Invitados
     {
         [Key]
         public int Id_Invitado { get; set; }

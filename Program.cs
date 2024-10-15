@@ -12,7 +12,7 @@ var builder = WebApplication.CreateBuilder(args);
 //CORS
 builder.Services.AddCors(p => p.AddPolicy("politicaCors", build =>
 {
-    build.WithOrigins("http://localhost:5046", "https://localhost:7259", "http://172.16.101.20:81", "http://localhost:81")
+    build.WithOrigins("http://localhost:5055", "http://localhost:5173", "http://172.16.101.33:83", "http://localhost:83", "https://localhost:7259", "https://localhost:443", "https://backsimposio.grupomepiel.com.mx", "https://172.16.101.204:5173")
          .AllowAnyMethod()
          .AllowAnyHeader()
          .AllowCredentials(); // No uses AllowAnyOrigin()
@@ -25,7 +25,7 @@ builder.Services.AddResponseCaching();
 
 // Servicio SQL
 builder.Services.AddDbContext<ApplicationDbContext>(opciones =>
-                  opciones.UseSqlServer(builder.Configuration.GetConnectionString("ConexionSQL")));
+                  opciones.UseSqlServer(builder.Configuration.GetConnectionString("ConexionSQL"))); 
 
 
 //Respetar mayusculas al inicio de variables en respuesta.
@@ -70,6 +70,8 @@ builder.Services.AddSwaggerGen(c =>
 
 
 builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
+builder.Services.AddScoped<IClienteRepository, ClienteRepository>();
+builder.Services.AddScoped<IInvitadosExtraRepository, InvitadosExtraRepository>();
 
 
 var app = builder.Build();

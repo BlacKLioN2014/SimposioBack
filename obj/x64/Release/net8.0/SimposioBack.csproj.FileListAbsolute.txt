@@ -134,6 +134,7 @@ C:\Users\abraham.jimenez\Desktop\Proyectos\SimposioBack\obj\x64\Release\net8.0\S
 C:\Users\abraham.jimenez\Desktop\Proyectos\SimposioBack\obj\x64\Release\net8.0\SimposioBack.csproj.CoreCompileInputs.cache
 C:\Users\abraham.jimenez\Desktop\Proyectos\SimposioBack\obj\x64\Release\net8.0\SimposioBack.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\abraham.jimenez\Desktop\Proyectos\SimposioBack\obj\x64\Release\net8.0\SimposioBack.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\abraham.jimenez\Desktop\Proyectos\SimposioBack\obj\x64\Release\net8.0\SimposioBack.sourcelink.json
 C:\Users\abraham.jimenez\Desktop\Proyectos\SimposioBack\obj\x64\Release\net8.0\staticwebassets.build.json
 C:\Users\abraham.jimenez\Desktop\Proyectos\SimposioBack\obj\x64\Release\net8.0\staticwebassets.development.json
 C:\Users\abraham.jimenez\Desktop\Proyectos\SimposioBack\obj\x64\Release\net8.0\staticwebassets\msbuild.SimposioBack.Microsoft.AspNetCore.StaticWebAssets.props

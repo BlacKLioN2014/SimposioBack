@@ -11,6 +11,7 @@ namespace SimposioBack.Mapper
         {
             CreateMap<Usuario, UsuarioLoginDto>().ReverseMap();
             CreateMap<Usuario, UsuarioRegistroDto>().ReverseMap();
+            CreateMap<InvitadosExtra, InvitadoExtraRegistroDto>().ReverseMap();
         }
 
     }
