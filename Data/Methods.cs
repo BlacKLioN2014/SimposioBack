@@ -298,5 +298,146 @@ namespace SimposioBack.Data
         #endregion
 
 
+        #region Metodo contadoresDeInvitados
+
+        public static Contadores_ GetContadores_()
+        {
+            string connectionString = "Data Source=172.16.101.41\\DBINVENTORY;Initial Catalog=Simposio;User ID=sa;Password=SQLserver24; Trusted_Connection=False;Encrypt=false;TrustServerCertificate=true;MultipleActiveResultSets=true;";
+
+            Contadores_ contadores_ = new Contadores_();
+
+            using (SqlConnection conexion = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    conexion.Open();
+
+                    if (conexion.State == System.Data.ConnectionState.Open)
+                    {
+                        //total de invitados asistentes
+                        string Query = $@"
+SELECT  
+COUNT(i.Id_Invitado)  ""total de invitados asistentes""
+
+from 
+Invitados i 
+
+where 
+i.Asistencia = 1";
+                        using (SqlCommand command = new SqlCommand(Query, conexion))
+                        {
+                            using (SqlDataReader reader = command.ExecuteReader())
+                            {
+                                while (reader.Read())
+                                {
+
+                                    contadores_.total_Invitados_Confirmados = reader.GetInt32(0);
+
+                                }
+                            }
+                        }
+
+                        //total de invitados pendientes
+                        Query = $@"
+SELECT  
+COUNT(i.Id_Invitado)  ""total de invitados pendientes""
+
+from 
+Invitados i 
+
+where 
+i.Asistencia = 0";
+                        using (SqlCommand command = new SqlCommand(Query, conexion))
+                        {
+                            using (SqlDataReader reader = command.ExecuteReader())
+                            {
+                                while (reader.Read())
+                                {
+
+                                    contadores_.total_Invitados_Pendientes = reader.GetInt32(0);
+
+                                }
+                            }
+                        }
+
+                        //total de invitados
+                        Query = $@"
+SELECT   
+COUNT(i.Id_Invitado)  ""total de invitados""
+
+from 
+Invitados i ";
+                        using (SqlCommand command = new SqlCommand(Query, conexion))
+                        {
+                            using (SqlDataReader reader = command.ExecuteReader())
+                            {
+                                while (reader.Read())
+                                {
+
+                                    contadores_.total_Invitados = reader.GetInt32(0);
+
+                                }
+                            }
+                        }
+
+                        //total de invitados extra
+                        Query = $@"
+SELECT   
+COUNT(ie.Id_Invitado_Extra )  ""total de invitados extra""
+
+from 
+InvitadosExtras ie";
+                        using (SqlCommand command = new SqlCommand(Query, conexion))
+                        {
+                            using (SqlDataReader reader = command.ExecuteReader())
+                            {
+                                while (reader.Read())
+                                {
+
+                                    contadores_.total_invitadosExtra = reader.GetInt32(0);
+
+                                }
+                            }
+                        }
+
+                    }
+                    else
+                    {
+                        string error = "No fue posible establecer conexion con la base de datos ";
+
+                        DateTime date = DateTime.Now;
+                        string fechaFormateada = date.ToString("yyyyMMdd");
+
+                        //Generar log
+                        Log(_path + @"Log\" + fechaFormateada + ".txt", error);
+
+                        contadores_ = new Contadores_();
+                        contadores_.total_Invitados = 666;
+
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    string error = $"Error al obtener contadores " + ex.Message.ToString();
+
+                    DateTime date = DateTime.Now;
+                    string fechaFormateada = date.ToString("yyyyMMdd");
+
+                    //Generar log
+                    Log(_path + @"Log\" + fechaFormateada + ".txt", error);
+
+                    contadores_ = new Contadores_();
+                    contadores_.total_Invitados = 666;
+                }
+            }
+
+            return contadores_;
+
+        }
+
+        #endregion
+
+
     }
 }

@@ -334,5 +334,41 @@ namespace SimposioBack.Controllers
             return Ok(Api_Response);
 
         }
+
+
+        [HttpGet("contadoresDeInvitados")]
+        [SwaggerOperation(
+        Summary = "Método obtener contadores de Invitados",
+        Description = "El método obtener contadores de Invitados permite obtener un json que contiene el total de invitados, el total de asistencia y el total de pendientes de asistencia. ")]
+        [ResponseCache(Duration = 10)]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public async Task<IActionResult> contadoresDeInvitados()
+        {
+            Api_Response<Contadores_> Api_Response = new Api_Response<Contadores_>();
+
+            Contadores_ contadores = Methods.GetContadores_();
+
+            if (contadores.total_Invitados == 666)
+            {
+                Api_Response.Exito = false;
+                Api_Response.StatusCode = System.Net.HttpStatusCode.BadRequest;
+                Api_Response.Respuesta = null;
+                Api_Response.ErrorMessages.Add("Ocurrio un error, revisar log");
+
+                return BadRequest(Api_Response);
+            }
+
+            Api_Response.Exito = true;
+            Api_Response.StatusCode = System.Net.HttpStatusCode.Created;
+            Api_Response.Respuesta = contadores;
+
+            return Ok(Api_Response);
+
+        }
+
+
+
     }
 }
