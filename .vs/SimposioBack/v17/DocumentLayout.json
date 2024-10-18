@@ -17,10 +17,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{75CACDDC-94CB-400F-98B6-120BE9940638}|SimposioBack.csproj|c:\\users\\abraham.jimenez\\desktop\\proyectos\\simposioback\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{75CACDDC-94CB-400F-98B6-120BE9940638}|SimposioBack.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{75CACDDC-94CB-400F-98B6-120BE9940638}|SimposioBack.csproj|c:\\users\\abraham.jimenez\\desktop\\proyectos\\simposioback\\models\\contadores_.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{75CACDDC-94CB-400F-98B6-120BE9940638}|SimposioBack.csproj|solutionrelative:models\\contadores_.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,24 +26,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Contadores_.cs",
-              "DocumentMoniker": "C:\\Users\\abraham.jimenez\\Desktop\\Proyectos\\SimposioBack\\Models\\Contadores_.cs",
-              "RelativeDocumentMoniker": "Models\\Contadores_.cs",
-              "ToolTip": "C:\\Users\\abraham.jimenez\\Desktop\\Proyectos\\SimposioBack\\Models\\Contadores_.cs",
-              "RelativeToolTip": "Models\\Contadores_.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAnAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-16T16:53:30.715Z",
-              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -57,7 +40,7 @@
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\abraham.jimenez\\Desktop\\Proyectos\\SimposioBack\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAFkAAAAAAAAAAAAAAGQAAAAAAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA4AAABnAQAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-11T22:44:02.448Z",
               "EditorCaption": ""
@@ -83,7 +66,7 @@
               "RelativeDocumentMoniker": "Data\\Methods.cs",
               "ToolTip": "C:\\Users\\abraham.jimenez\\Desktop\\Proyectos\\SimposioBack\\Data\\Methods.cs",
               "RelativeToolTip": "Data\\Methods.cs",
-              "ViewState": "AQIAAI0BAAAAAAAAAAAuwJABAAAZAAAA",
+              "ViewState": "AQIAAOgBAAAAAAAAAAAlwAUCAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-15T16:36:38.318Z",
               "EditorCaption": ""
@@ -96,7 +79,7 @@
               "RelativeDocumentMoniker": "Controllers\\SimposioController.cs",
               "ToolTip": "C:\\Users\\abraham.jimenez\\Desktop\\Proyectos\\SimposioBack\\Controllers\\SimposioController.cs",
               "RelativeToolTip": "Controllers\\SimposioController.cs",
-              "ViewState": "AQIAAOkAAAAAAAAAAAAwwHMBAAAAAAAA",
+              "ViewState": "AQIAAIMBAAAAAAAAAAAtwKcBAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-11T22:31:32.243Z",
               "EditorCaption": ""

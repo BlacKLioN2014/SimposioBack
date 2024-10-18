@@ -9,6 +9,8 @@ namespace SimposioBack.Models.Dtos
 
         public int Id_Cliente { get; set; }
 
+        public string Cliente { get; set; }
+
         public string Nombre_Invitado { get; set; }
 
         public bool Asistencia { get; set; }

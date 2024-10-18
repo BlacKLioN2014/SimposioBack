@@ -20,6 +20,7 @@ namespace SimposioBack.Controllers
         private readonly IClienteRepository _ClienteRepository;
         private readonly IInvitadosExtraRepository _invitadosExtraRepository;
 
+
         private readonly IMapper _Mapper;
 
 
@@ -70,7 +71,6 @@ namespace SimposioBack.Controllers
         [SwaggerOperation(
         Summary = "Método registro usuarios",
         Description = "El Método registro usuarios permite el registro de un usuario en base de datos.")]
-        [ResponseCache(Duration = 10)]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
@@ -116,7 +116,6 @@ namespace SimposioBack.Controllers
         [SwaggerOperation(
         Summary = "Método registro clientes",
         Description = "El Método registro clientes permite el registro de un cliente en base de datos.")]
-        [ResponseCache(Duration = 10)]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
@@ -191,7 +190,7 @@ namespace SimposioBack.Controllers
         }
 
 
-        [HttpGet("obtenerCliente")]
+        [HttpGet("ObtenerCliente")]
         [SwaggerOperation(
         Summary = "Método obtener cliente",
         Description = "El método obtener cliente permite obtener los datos del cliente y una listado de los invitados del cliente.")]
@@ -224,33 +223,43 @@ namespace SimposioBack.Controllers
         }
 
 
-        [HttpPost("Actualizar_Invitado")]
+        [HttpPost("Actualizar_Invitados")]
         [SwaggerOperation(
-        Summary = "Método actualizar invitado",
-        Description = "El método actualizar invitado permite cambiar el estatus de asistencia de un invitado")]
-        [ResponseCache(Duration = 10)]
+Summary = "Método actualizar invitado",
+Description = "El método actualizar invitado permite cambiar el estatus de asistencia de un invitado")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<IActionResult> UpdateInvitado(int Id_Invitado)
+        public async Task<IActionResult> UpdateInvitado([FromBody] _ids_Invitados_ Ids)
         {
-            Api_Response<string> Api_Response = new Api_Response<string>();
+            Api_Response<List<string>> Api_Response = new Api_Response<List<string>>();
 
-            bool actualizacion = Methods.Actualizar_Invitado(Id_Invitado);
-
-            if (!actualizacion)
+            if (Ids.Ids.Count < 1 || Ids.Ids[0] == 0)
             {
                 Api_Response.Exito = false;
                 Api_Response.StatusCode = System.Net.HttpStatusCode.BadRequest;
                 Api_Response.Respuesta = null;
-                Api_Response.ErrorMessages.Add($"No fue posible actualizar el registro, Id_Invitado {Id_Invitado}");
+                Api_Response.ErrorMessages.Add($"Favor de compartir una lista de Ids");
+
+                return BadRequest(Api_Response);
+            }
+
+
+            List<string> actualizacion = Methods.Actualizar_Invitado(Ids.Ids);
+
+            if (actualizacion.Count < 1)
+            {
+                Api_Response.Exito = false;
+                Api_Response.StatusCode = System.Net.HttpStatusCode.BadRequest;
+                Api_Response.Respuesta = null;
+                Api_Response.ErrorMessages.Add($"No fue posible actualizar la lista de Ids");
 
                 return BadRequest(Api_Response);
             }
 
             Api_Response.Exito = true;
             Api_Response.StatusCode = System.Net.HttpStatusCode.Created;
-            Api_Response.Respuesta = $"Invitado con registro Id_Invitado {Id_Invitado}, actualizado correctamente";
+            Api_Response.Respuesta = actualizacion;
 
             return Ok(Api_Response);
 
@@ -259,9 +268,8 @@ namespace SimposioBack.Controllers
 
         [HttpPost("Registro_InvitadosExtra")]
         [SwaggerOperation(
-        Summary = "Método registro invitados Extra",
-        Description = "El método registro invitados Extra permite el registro de un invitado extra en base de datos.")]
-        [ResponseCache(Duration = 10)]
+Summary = "Método registro invitados Extra",
+Description = "El método registro invitados Extra permite el registro de un invitado extra en base de datos.")]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
@@ -303,7 +311,50 @@ namespace SimposioBack.Controllers
         }
 
 
-        [HttpGet("obtenerInvitadosExtra")]
+        [HttpPost("Eliminar_InvitadoExtra")]
+        [SwaggerOperation(
+        Summary = "Método eliminar invitado extra",
+        Description = "El método eliminar invitado extra permite eliminar un invitado extra")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public async Task<IActionResult> DeleteInvitadoExtra([FromBody] int Id_InvitadoExtra)
+        {
+            Api_Response<string> Api_Response = new Api_Response<string>();
+
+            if (Id_InvitadoExtra < 1 )
+            {
+                Api_Response.Exito = false;
+                Api_Response.StatusCode = System.Net.HttpStatusCode.BadRequest;
+                Api_Response.Respuesta = null;
+                Api_Response.ErrorMessages.Add($"Favor de ingresar un Id");
+
+                return BadRequest(Api_Response);
+            }
+
+
+            bool actualizacion = Methods.Eliminar_InvitadoExtra(Id_InvitadoExtra);
+
+            if (!actualizacion)
+            {
+                Api_Response.Exito = false;
+                Api_Response.StatusCode = System.Net.HttpStatusCode.BadRequest;
+                Api_Response.Respuesta = null;
+                Api_Response.ErrorMessages.Add($"No fue posible eliminar el Id {Id_InvitadoExtra}");
+
+                return BadRequest(Api_Response);
+            }
+
+            Api_Response.Exito = true;
+            Api_Response.StatusCode = System.Net.HttpStatusCode.OK;
+            Api_Response.Respuesta = $"Se elimino el Id {Id_InvitadoExtra}";
+
+            return Ok(Api_Response);
+
+        }
+
+
+        [HttpGet("ObtenerInvitadosExtra")]
         [SwaggerOperation(
         Summary = "Método obtener invitados extra",
         Description = "El método obtener invitados extra permite obtener un listado de los invitados extra en base")]
@@ -336,7 +387,7 @@ namespace SimposioBack.Controllers
         }
 
 
-        [HttpGet("contadoresDeInvitados")]
+        [HttpGet("ContadoresDeInvitados")]
         [SwaggerOperation(
         Summary = "Método obtener contadores de Invitados",
         Description = "El método obtener contadores de Invitados permite obtener un json que contiene el total de invitados, el total de asistencia y el total de pendientes de asistencia. ")]

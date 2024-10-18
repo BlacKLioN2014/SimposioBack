@@ -23,5 +23,7 @@ namespace SimposioBack.Models
 
         [ForeignKey("Id_Evento ")]
         public Evento Evento { get; set; }
+
+        public int? Mesa { get; set; }
     }
 }

@@ -16,7 +16,6 @@ namespace SimposioBack.Models.Dtos
         [StringLength(50)]
         public string Apellido_Paterno { get; set; }
 
-        [Required]
         [StringLength(50)]
         public string Apellido_Materno { get; set; }
 

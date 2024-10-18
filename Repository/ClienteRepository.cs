@@ -29,7 +29,7 @@ namespace SimposioBack.Repository
 
         public ICollection<Cliente> GetClientes()
         {
-            return _bd.Cliente.OrderBy(c => c.Nombre_Cliente).ToList();
+            return _bd.Cliente.OrderBy(c => c.Id_Cliente).ToList();
         }
 
 
@@ -73,7 +73,8 @@ namespace SimposioBack.Repository
                 Nombre_Cliente = clienteRegistroDto.Nombre,
                 Numero_Invitados = clienteRegistroDto.Numero_Invitados,
                 Estado = clienteRegistroDto.Estado,
-                Id_Evento = 1,
+                Id_Evento = clienteRegistroDto.Id_Evento,
+                Mesa = clienteRegistroDto.Mesa,
             };
 
             var AgregarCliente = _bd.Add(cliente);

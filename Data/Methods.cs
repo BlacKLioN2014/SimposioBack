@@ -137,8 +137,9 @@ namespace SimposioBack.Data
 
         }
 
-        public static bool Actualizar_Invitado(int Id_Invitado)
+        public static List<string> Actualizar_Invitado(List <int> _Ids)
         {
+            List<string> Actualizaciones = new List<string>();
             bool Actualizacion = false;
             string connectionString = "Data Source=172.16.101.41\\DBINVENTORY;Initial Catalog=Simposio;User ID=sa;Password=SQLserver24; Trusted_Connection=False;Encrypt=false;TrustServerCertificate=true;MultipleActiveResultSets=true;";
 
@@ -150,22 +151,31 @@ namespace SimposioBack.Data
 
                     if (conexion.State == System.Data.ConnectionState.Open)
                     {
-                        string Query = "UPDATE SIMPOSIO.dbo.Invitados SET Asistencia = 1 WHERE Id_Invitado = @IdInvitado;";
-
-                        using (SqlCommand command = new SqlCommand(Query, conexion))
+                        foreach (var id in _Ids)
                         {
-                            // Usamos un parámetro para evitar inyecciones SQL
-                            command.Parameters.AddWithValue("@IdInvitado", Id_Invitado);
 
-                            // Ejecutar la actualización
-                            int filasAfectadas = command.ExecuteNonQuery();
+                            string Query = "UPDATE SIMPOSIO.dbo.Invitados SET Asistencia = 1 WHERE Id_Invitado = @IdInvitado;";
 
-                            // Verificar si se actualizó algún registro
-                            Actualizacion = filasAfectadas > 0;
-
-                            if (Actualizacion)
+                            using (SqlCommand command = new SqlCommand(Query, conexion))
                             {
-                                return true;
+                                // Usamos un parámetro para evitar inyecciones SQL
+                                command.Parameters.AddWithValue("@IdInvitado", id);
+
+                                // Ejecutar la actualización
+                                int filasAfectadas = command.ExecuteNonQuery();
+
+                                // Verificar si se actualizó algún registro
+                                Actualizacion = filasAfectadas > 0;
+
+                                if (Actualizacion)
+                                {
+                                    Actualizaciones.Add($"Id {id}, actualizado correctamente");
+                                }
+                                else
+                                {
+                                    Actualizaciones.Add($"Id {id}, no se pudo actualizar");
+                                }
+
                             }
 
                         }
@@ -179,20 +189,23 @@ namespace SimposioBack.Data
 
                         //Generar log
                         Log(_path + @"Log\" + fechaFormateada + ".txt", error);
+
                     }
                 }
                 catch (Exception ex)
                 {
-                    string error = "Error al obtener paymentMethods " + ex.Message.ToString();
+                    string error = $"Error al actualizar invitados " + ex.Message.ToString();
 
                     DateTime date = DateTime.Now;
                     string fechaFormateada = date.ToString("yyyyMMdd");
 
                     //Generar log
                     Log(_path + @"Log\" + fechaFormateada + ".txt", error);
+
+                    Actualizaciones = new List<string>();
                 }
             }
-            return Actualizacion;
+            return Actualizaciones;
         }
 
         #endregion
@@ -253,6 +266,7 @@ namespace SimposioBack.Data
                                     {
                                         Id_Invitado = reader2.GetInt32(0),
                                         Id_Cliente = reader2.GetInt32(1),
+                                        Cliente = client_Response.Nombre_Cliente,
                                         Nombre_Invitado = reader2.GetString(2),
                                         Asistencia = reader2.GetBoolean(3),
                                     };
@@ -439,5 +453,70 @@ InvitadosExtras ie";
         #endregion
 
 
+        #region Metodo DeleteInvitadoExtra
+
+        public static bool Eliminar_InvitadoExtra(int Id_InvitadoExtra)
+        {
+            bool Actualizacion = false;
+            string connectionString = "Data Source=172.16.101.41\\DBINVENTORY;Initial Catalog=Simposio;User ID=sa;Password=SQLserver24; Trusted_Connection=False;Encrypt=false;TrustServerCertificate=true;MultipleActiveResultSets=true;";
+
+            using (SqlConnection conexion = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    conexion.Open();
+
+                    if (conexion.State == System.Data.ConnectionState.Open)
+                    {
+
+                            string Query = "DELETE FROM SIMPOSIO.dbo.InvitadosExtras  \r\nWHERE  Id_Invitado_Extra = @IdInvitadoExtra";
+
+                            using (SqlCommand command = new SqlCommand(Query, conexion))
+                            {
+                                // Usamos un parámetro para evitar inyecciones SQL
+                                command.Parameters.AddWithValue("@IdInvitadoExtra", Id_InvitadoExtra);
+
+                                // Ejecutar la actualización
+                                int filasAfectadas = command.ExecuteNonQuery();
+
+                                // Verificar si se actualizó algún registro
+                                Actualizacion = filasAfectadas > 0;
+
+                                if (Actualizacion)
+                                {
+                                Actualizacion = true;
+                                }
+
+                            }
+
+                    }
+                    else
+                    {
+                        string error = "No fue posible establecer conexion con la base de datos ";
+
+                        DateTime date = DateTime.Now;
+                        string fechaFormateada = date.ToString("yyyyMMdd");
+
+                        //Generar log
+                        Log(_path + @"Log\" + fechaFormateada + ".txt", error);
+
+                    }
+                }
+                catch (Exception ex)
+                {
+                    string error = $"Error al eliminar invitado extra {Id_InvitadoExtra} " + ex.Message.ToString();
+
+                    DateTime date = DateTime.Now;
+                    string fechaFormateada = date.ToString("yyyyMMdd");
+
+                    //Generar log
+                    Log(_path + @"Log\" + fechaFormateada + ".txt", error);
+
+                }
+            }
+            return Actualizacion;
+        }
+
+        #endregion
     }
 }

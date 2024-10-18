@@ -12,7 +12,7 @@ var builder = WebApplication.CreateBuilder(args);
 //CORS
 builder.Services.AddCors(p => p.AddPolicy("politicaCors", build =>
 {
-    build.WithOrigins("http://localhost:5055", "http://localhost:5173", "http://172.16.101.33:83", "http://localhost:83", "https://localhost:7259", "https://localhost:443", "https://backsimposio.grupomepiel.com.mx", "https://172.16.101.204:5173", "https://172.16.101.33", "https://172.16.101.33:443", "https://localhost")
+    build.WithOrigins("http://localhost:5055", "http://localhost:5173", "http://172.16.101.33:83", "http://localhost:83", "https://localhost:7259", "https://localhost:443", "https://backsimposio.grupomepiel.com.mx", "https://172.16.101.204:5173", "https://172.16.101.33", "https://172.16.101.33:443", "https://localhost", "https://simposio.grupomepiel.com.mx/")
          .AllowAnyMethod()
          .AllowAnyHeader()
          .AllowCredentials(); // No uses AllowAnyOrigin()

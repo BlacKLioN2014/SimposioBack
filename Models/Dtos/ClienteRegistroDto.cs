@@ -14,5 +14,9 @@ namespace SimposioBack.Models.Dtos
         [Required(ErrorMessage = "El estado es obligatoria")]
         public string Estado { get; set; }
 
+        public int Id_Evento { get; set; }
+
+        public int Mesa { get; set; }
+
     }
 }

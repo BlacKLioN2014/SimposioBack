@@ -98,7 +98,7 @@ namespace SimposioBack.Repository
                 Correo = UsuarioRegistroDto.Correo,
                 Nombre = UsuarioRegistroDto.Nombre,
                 Contraseña = UsuarioRegistroDto.Contraseña,
-
+                
             };
 
             var AgregarUsuario = _bd.Add(usuario);

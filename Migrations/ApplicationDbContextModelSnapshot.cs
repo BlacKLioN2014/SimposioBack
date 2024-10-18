@@ -48,7 +48,7 @@ namespace SimposioBack.Migrations
 
                     b.HasIndex("Id_Evento");
 
-                    b.ToTable("Cliente");
+                    b.ToTable("Cliente", (string)null);
                 });
 
             modelBuilder.Entity("SimposioBack.Models.Evento", b =>
@@ -68,7 +68,7 @@ namespace SimposioBack.Migrations
 
                     b.HasKey("Id_Evento");
 
-                    b.ToTable("Evento");
+                    b.ToTable("Evento", (string)null);
                 });
 
             modelBuilder.Entity("SimposioBack.Models.Usuario", b =>
@@ -95,7 +95,7 @@ namespace SimposioBack.Migrations
 
                     b.HasKey("Id_Usuario");
 
-                    b.ToTable("Usuario");
+                    b.ToTable("Usuario", (string)null);
                 });
 
             modelBuilder.Entity("SimposioBack.Models.Cliente", b =>
