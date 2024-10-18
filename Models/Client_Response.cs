@@ -16,8 +16,6 @@ namespace SimposioBack.Models
 
         public int Id_Evento { get; set; }
 
-        public int Mesa { get; set; }
-
         public List<InvitadoRegistroDto> Invitados { get; set; }
 
     }

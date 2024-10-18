@@ -13,6 +13,8 @@ namespace SimposioBack.Models.Dtos
 
         public string Nombre_Invitado { get; set; }
 
+        public int Mesa { get; set; }
+
         public bool Asistencia { get; set; }
     }
 }

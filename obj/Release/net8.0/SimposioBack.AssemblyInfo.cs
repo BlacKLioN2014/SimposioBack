@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SimposioBack")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7629ec052ee5a381d70e082144844ec0108207a2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a773bb24c5a74d0fa779a8824b29c956a9298363")]
 [assembly: System.Reflection.AssemblyProductAttribute("SimposioBack")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SimposioBack")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

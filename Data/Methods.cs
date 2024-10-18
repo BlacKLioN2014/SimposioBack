@@ -221,7 +221,7 @@ namespace SimposioBack.Data
 
             List<InvitadoRegistroDto> invitados = new List<InvitadoRegistroDto>();
 
-            //InvitadoRegistroDto invitado  = new InvitadoRegistroDto();
+            int Mesa = 0;
 
             using (SqlConnection conexion = new SqlConnection(connectionString))
             {
@@ -247,8 +247,8 @@ namespace SimposioBack.Data
                                         Numero_Invitados = reader.GetInt32(2),
                                         Estado = reader.GetString(3),
                                         Id_Evento = reader.GetInt32(4),
-                                        Mesa = reader.GetInt32(5),
                                     };
+                                    Mesa = reader.GetInt32(5);
 
                                 }
                             }
@@ -270,6 +270,7 @@ namespace SimposioBack.Data
                                         Cliente = client_Response.Nombre_Cliente,
                                         Nombre_Invitado = reader2.GetString(2),
                                         Asistencia = reader2.GetBoolean(3),
+                                        Mesa = Mesa,
                                     };
 
                                     invitados.Add(invitado);
