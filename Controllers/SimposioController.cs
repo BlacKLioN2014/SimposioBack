@@ -78,9 +78,9 @@ namespace SimposioBack.Controllers
         {
             Api_Response<UsuarioLoginRespuestaDto> Api_Response = new Api_Response<UsuarioLoginRespuestaDto>();
 
-            bool Email_Exist =  _UsuarioRepository.EmailExist(usuarioRegistroDto.Correo);
+            bool Email_Exist = _UsuarioRepository.EmailExist(usuarioRegistroDto.Correo);
 
-            if (Email_Exist) 
+            if (Email_Exist)
             {
                 Api_Response.Exito = false;
                 Api_Response.StatusCode = System.Net.HttpStatusCode.BadRequest;
@@ -123,17 +123,17 @@ namespace SimposioBack.Controllers
         {
             Api_Response<UsuarioLoginRespuestaDto> Api_Response = new Api_Response<UsuarioLoginRespuestaDto>();
 
-            bool Nombre_Exist = _ClienteRepository.NombreExist(ClienteRegistroDto.Nombre);
+            //bool Nombre_Exist = _ClienteRepository.NombreExist(ClienteRegistroDto.Nombre);
 
-            if (Nombre_Exist)
-            {
-                Api_Response.Exito = false;
-                Api_Response.StatusCode = System.Net.HttpStatusCode.BadRequest;
-                Api_Response.Respuesta = null;
-                Api_Response.ErrorMessages.Add("El nombre de cliente ya esta registrado");
+            //if (Nombre_Exist)
+            //{
+            //    Api_Response.Exito = false;
+            //    Api_Response.StatusCode = System.Net.HttpStatusCode.BadRequest;
+            //    Api_Response.Respuesta = null;
+            //    Api_Response.ErrorMessages.Add("El nombre de cliente ya esta registrado");
 
-                return BadRequest(Api_Response);
-            }
+            //    return BadRequest(Api_Response);
+            //}
 
             bool respuestaLogin = await _ClienteRepository.Registro(ClienteRegistroDto);
 
@@ -277,17 +277,17 @@ Description = "El método registro invitados Extra permite el registro de un inv
         {
             Api_Response<UsuarioLoginRespuestaDto> Api_Response = new Api_Response<UsuarioLoginRespuestaDto>();
 
-            bool Nombre_Exist = _invitadosExtraRepository.NombreExist(invitadoExtraRegistroDto.Nombre);
+            //bool Nombre_Exist = _invitadosExtraRepository.NombreExist(invitadoExtraRegistroDto.Nombre);
 
-            if (Nombre_Exist)
-            {
-                Api_Response.Exito = false;
-                Api_Response.StatusCode = System.Net.HttpStatusCode.BadRequest;
-                Api_Response.Respuesta = null;
-                Api_Response.ErrorMessages.Add("El invitado ya esta registrado");
+            //if (Nombre_Exist)
+            //{
+            //    Api_Response.Exito = false;
+            //    Api_Response.StatusCode = System.Net.HttpStatusCode.BadRequest;
+            //    Api_Response.Respuesta = null;
+            //    Api_Response.ErrorMessages.Add("El invitado ya esta registrado");
 
-                return BadRequest(Api_Response);
-            }
+            //    return BadRequest(Api_Response);
+            //}
 
             bool respuestaLogin = await _invitadosExtraRepository.Registro(invitadoExtraRegistroDto);
 

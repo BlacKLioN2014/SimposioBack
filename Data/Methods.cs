@@ -231,7 +231,7 @@ namespace SimposioBack.Data
 
                     if (conexion.State == System.Data.ConnectionState.Open)
                     {
-                        string Query = $"SELECT Id_Cliente, Nombre_Cliente, Numero_Invitados, Estado, Id_Evento\r\nFROM SIMPOSIO.dbo.Cliente  where Nombre_Cliente = '{Nombre_Cliente}';";
+                        string Query = $"SELECT Id_Cliente, Nombre_Cliente, Numero_Invitados, Estado, Id_Evento, Mesa\r\nFROM SIMPOSIO.dbo.Cliente  where Nombre_Cliente = '{Nombre_Cliente}';";
 
                         using (SqlCommand command = new SqlCommand(Query, conexion))
                         {
@@ -247,6 +247,7 @@ namespace SimposioBack.Data
                                         Numero_Invitados = reader.GetInt32(2),
                                         Estado = reader.GetString(3),
                                         Id_Evento = reader.GetInt32(4),
+                                        Mesa = reader.GetInt32(5),
                                     };
 
                                 }

@@ -7,12 +7,12 @@
       "RelativeMoniker": "D:0:0:{75CACDDC-94CB-400F-98B6-120BE9940638}|SimposioBack.csproj|solutionrelative:controllers\\simposiocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{75CACDDC-94CB-400F-98B6-120BE9940638}|SimposioBack.csproj|c:\\users\\abraham.jimenez\\desktop\\proyectos\\simposioback\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{75CACDDC-94CB-400F-98B6-120BE9940638}|SimposioBack.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{75CACDDC-94CB-400F-98B6-120BE9940638}|SimposioBack.csproj|c:\\users\\abraham.jimenez\\desktop\\proyectos\\simposioback\\data\\methods.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{75CACDDC-94CB-400F-98B6-120BE9940638}|SimposioBack.csproj|solutionrelative:data\\methods.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{75CACDDC-94CB-400F-98B6-120BE9940638}|SimposioBack.csproj|c:\\users\\abraham.jimenez\\desktop\\proyectos\\simposioback\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{75CACDDC-94CB-400F-98B6-120BE9940638}|SimposioBack.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{75CACDDC-94CB-400F-98B6-120BE9940638}|SimposioBack.csproj|c:\\users\\abraham.jimenez\\desktop\\proyectos\\simposioback\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -34,7 +34,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\abraham.jimenez\\Desktop\\Proyectos\\SimposioBack\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -42,8 +42,7 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-11T22:44:02.448Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-11T22:44:02.448Z"
             },
             {
               "$type": "Document",
@@ -59,15 +58,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Methods.cs",
               "DocumentMoniker": "C:\\Users\\abraham.jimenez\\Desktop\\Proyectos\\SimposioBack\\Data\\Methods.cs",
               "RelativeDocumentMoniker": "Data\\Methods.cs",
               "ToolTip": "C:\\Users\\abraham.jimenez\\Desktop\\Proyectos\\SimposioBack\\Data\\Methods.cs",
               "RelativeToolTip": "Data\\Methods.cs",
-              "ViewState": "AQIAAOgBAAAAAAAAAAAlwAUCAAAIAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAawNcAAABGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-15T16:36:38.318Z"
+              "WhenOpened": "2024-10-15T16:36:38.318Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -77,7 +77,7 @@
               "RelativeDocumentMoniker": "Controllers\\SimposioController.cs",
               "ToolTip": "C:\\Users\\abraham.jimenez\\Desktop\\Proyectos\\SimposioBack\\Controllers\\SimposioController.cs",
               "RelativeToolTip": "Controllers\\SimposioController.cs",
-              "ViewState": "AQIAACkAAAAAAAAAAAAQwKcBAAAFAAAA",
+              "ViewState": "AQIAAOAAAAAAAAAAAAAmwOcAAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-11T22:31:32.243Z",
               "EditorCaption": ""
